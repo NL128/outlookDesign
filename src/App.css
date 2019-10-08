@@ -1,0 +1,562 @@
+/*Animation area*/
+
+@keyframes slide {
+  0%    { left: 0; opacity: 0.7; }
+  50%{left:-30%; opacity: 1;}
+  60%{left:-50%; opacity: 1;}
+  70%{left:-70%; opacity: 1;}
+  80%{left:-50%; opacity:1;}
+  85%{left:-70%; opacity:1;}
+  90%{left:-100% ; opacity:1;}
+  100%  { left: -180%; opacity: 0.8; }
+}
+@keyframes goFirst{
+  from {
+    left: 25%;
+  }to{left: 15%;}
+}
+@keyframes goSecond{
+  from {
+    right: 25%;
+  }to{right: 15%;}
+}
+@keyframes rotateAroundZIcon{
+  0%{
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+    
+  }
+
+  100%{
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    
+  }
+}
+@keyframes rotateAroundZ{
+  0%{
+    -webkit-transform: rotateZ(-360deg);
+    transform: rotateZ(-360deg);
+    
+  }
+ 
+  100%{
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+    
+  }
+}
+
+@keyframes rotateAround{
+  from{
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  to{
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+}
+
+@keyframes resizeLeft{
+  from{
+    opacity: 1;
+    -webkit-transform: translate3d(70%, 0, 0);
+    transform: translate3d( 70%,0, 0);
+  }
+  to{
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+}
+
+
+@-webkit-keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+/*Animation area end*/
+*{margin: 0; padding: 0;
+}
+body{font:400 normal  1.125rem/1.35 'Segoe UI', sans-serif;
+  font-size: 100%;
+}
+.Nav{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%; height: auto;
+  align-items: center;
+  background-color :rgba(255, 255, 255, 0.2);
+}
+.Nav-Content{
+  width:60%;
+  height: 60px;
+  margin: 0 auto;
+ 
+  display: flex;
+  align-items: center;
+}
+.Nav-Content-inner{
+  width: 30%;
+  height: 50px;
+  
+ 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.Nav-Content-inner-right{
+  width: 80%;
+  height: 50px;
+  
+ 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+.Nav-Content-inner-right button{
+  height: 40px;
+  width:auto;
+  margin-right: 20px;
+  padding: 0 30px;
+  border-radius: 5px;
+}
+.Premium-Btn{
+  border: 1px solid white;
+  color:white;
+  background-color:rgba(255,255,255,0);
+}
+.secondSpace button:hover, .Premium-Btn:hover,.White-Btn:hover{cursor: pointer; transform: translateY(-2px); box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); animation-duration: 0.5s; }
+.White-Btn{
+  background-color: #f1f1f1;
+  color:#69AADB;
+  border: 0px solid white;
+}
+.Nav-Content-inner h3{color:#fff;}
+.Logo{
+  width:50px;
+  height: 50px;
+  background: url('../../outlook/src/Images/MicrosoftIcon.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.MainComponent{
+  width:100%;
+  min-height: 100vh;
+  background: url("../src/Images/girlContent.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;align-items: center;
+  justify-content: center;
+}
+.Sub-Title{
+  position: absolute;
+  top:80px;
+  width:60%;
+  margin: 0 auto;
+  color:white;
+  font-size: 1.6rem;
+  
+}
+.title-content{
+  position: relative;
+  width:60%; 
+  
+  
+  color: #f1f1f1;
+  
+ 
+}
+
+.title-content h1{
+  font-size: 5rem;
+  animation:fadeInUp 1.2s ease-in-out ;
+  
+}
+
+.BottomCreatAccount{
+  position:absolute;
+  width:80%;
+  bottom: 0;
+  right:0;
+  
+}
+.showAll{
+  width:100%;
+  height: auto; 
+  display: flex;
+  background-color:#fff;
+  animation: lightSpeedIn 0.8 ease-in 1s;
+}
+.firstSpace{
+  
+  order:1;
+  width:10%;
+ 
+  height: 100px;
+}
+.secondSpace{
+  order: 2;
+ 
+  width: 100%;
+
+}
+.secondSpace section{
+  position: relative;
+  width:100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  
+}
+.secondSpace section h3{padding: 10px 0;}
+.secondSpace button{
+  height: 50px;
+  width:300px;
+  text-align: center;
+  align-items: center;
+  margin-left: 30px;
+  border-radius: 5px;
+  border:0px solid white;
+  background-color: #0078D4;
+  color:#fff;
+}
+.thirdSpace{
+  order:3;
+  width:25%;
+
+  height: 100px;
+
+}
+
+.midFull{
+  width:100%;
+  min-height: 100vh;
+  display: flex;
+ 
+
+}
+.midFullSmaller{ width:100%;
+   height: auto;
+  display: flex;}
+.container{
+  position: relative;
+  width:100%;
+  height: 130vh;
+  background-color: #f1f1f1;
+}
+.topCard{
+  position:absolute;
+  width:100%;
+  height: 60vh;
+
+  top:100px;
+  left:0;
+}
+.ImgFull {position: relative; width:50%; height: 60vh; background:url('https://ow2.res.office365.com/owalanding/2019.9.10.02/images/efficient-commuter.jpg'); background-position: center; background-repeat: no-repeat;background-size: cover; margin: 0 10% 0 40%; }
+.bottomCard{
+  position:absolute;
+  width:100%;
+  height: 60vh;
+
+  top:200px;
+  left:0;
+}
+.textShow {position: relative; width:50%; display: flex;  align-items: center; height: 60vh; background-color:#f1f1f1;  margin: 0 40% 0 10%; }
+.textShow div{width:80%; height: 40vh;display: flex; flex-direction: column; color:#9A9A9A;}
+.textShow h1 {font-size: 4rem; color:#0078D4; animation: fadeInUp 1s ease-in-out ;}
+
+.ProductDisplay{
+  position: relative;
+  width:100%;
+  height: auto;
+  padding: 0 0 70px 0;
+  background-color: #DCEBFA;
+}
+
+.productOptions{
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: -22vh auto 0 auto;
+  
+  display: flex;
+  
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
+.productBtn{
+  border-radius: 7px;
+  height: 50px;
+  width:auto;
+  padding: 0 30px;
+  background-color: #0078D4;
+  color: #f1f1f1;
+  border:0px solid white;
+  cursor: pointer;
+  margin: 0 20px;
+  font-size: 1.6rem/0.00003;
+}
+.productBtn:hover{background-color: #f1f1f1;color:#0078D4;box-shadow: 2px 5px 5px #888888;transform:translateY(-6px);}
+
+.topDisplay{
+  position: relative;
+  width:80%; 
+  margin: 0 auto;
+ 
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  
+  top:-30vh ;
+  
+ 
+  box-shadow: 5px 10px 10px #888888;
+}
+.topDisplay img{position:  relative; width:100%; margin: 0 auto; background-position: center; background-size: cover; display: flex; justify-content: center; background-repeat: no-repeat;}
+.fadeInUpMode{animation: fadeInUp 1.2s ease-in-out 0.2s;}
+.afterMidFull{
+  
+  width:100%;
+  min-height: 100vh;
+  
+  background: url('../src/Images/girlWithPhone.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  
+}
+.fullStandAlone{position: absolute; width:100%;height: 100px;}
+.afterMidFullAnim{ 
+   position: absolute; width:40%; height: 50px; background-color:#DCEBFA; right:0; animation: resizeLeft 0.6s ease-in 2s;}
+.afterMidFullText{
+  position: relative;
+  width:100%;
+   
+  height:100vh;
+ 
+}
+.afterMidFullTitle{
+   position: relative;
+   
+   width:calc(50% - 80px);
+   height: auto;
+   
+   padding: 20px 40px;
+   color:white;
+  
+   
+}
+.afterMidFullCont{
+  position: relative;
+  
+  width:calc(50% - 40px);
+  height: 50vh;
+   display: flex;
+
+  padding: 20px 20px;
+  color:white;
+  
+  
+}
+.midleftCont{ margin-left:50px;width:70px; height: 50vh; display: flex; flex-direction: column;  justify-content: space-evenly; border-right:1px solid white;}
+.midrightCont{margin-left: 10px; height: 50vh; width:50%; display: flex; flex-direction: column; justify-content: space-evenly;}
+
+
+
+.afterMidFullTitle h1{font-size:3rem; }
+
+.IconsOnShield{width: 60px; height: 60px; background-color: white;  }
+ .timeRotationAnim1{animation:rotateAround 1.2s ease-in-out 2.5s;}
+ .timeRotationAnim2{animation:rotateAround 1.2s ease-in-out 3s;}
+ .timeRotationAnim3{animation:rotateAround 1.2s ease-in-out 3.3s;}
+ .timeRotationAnim4{animation:rotateAround 1.2s ease-in-out 3.6s;}
+.iconFull{position: relative;width:100%; height: 100%; }
+
+
+.fullT{width:100%; height: 40vh; display: flex; flex-direction: column;align-items: center; color:#0f0f0f;}
+.fullT h1{font-size:5.2rem;}
+.changeH1Color{color:#0078D4;}
+.sliderCover{position: relative; overflow: hidden; width:100%; min-height: 100vh; display: flex; justify-content: center; align-items: center;}
+.sliderContent{animation: slide 8500ms ease-out infinite;  width:300%;height: 100vh; position: absolute; left:0;  align-items: center; display: flex; justify-content: space-around;}
+.slideElementExcel{position: relative; width:800px; height: 80vh;  background: url('../src/Images/excel.png');background-position: center;background-repeat: no-repeat;background-size: contain; display: flex; justify-content:center; margin: 0 50px;}
+.slideElementWord{position: relative; width:800px; height: 80vh; background: url('../src/Images/word.png');background-position: center;background-repeat: no-repeat;background-size: contain; display: flex; justify-content:center; margin: 0 50px;}
+.slideElementPower{position: relative; width:800px; height: 80vh; background: url('../src/Images/power.png');background-position: center;background-repeat: no-repeat;background-size: contain;display: flex; justify-content:center; margin: 0 50px;}
+.slideElementWord p , .slideElementExcel p ,.slideElementPower p{position: absolute;bottom: -40px; width:100%; display: flex;
+  justify-content: center; font-size:2rem;}
+  .wordColor{color:#0078D4;}
+  .excelColor{color:#217245;}
+  .powerColor{color:#B6472A;}
+
+
+.RotationTitle{width:100%; min-height:50vh;background-color:#FFFFFF; display:flex; justify-content: center; align-items: center; flex-direction: column; font-size:1.4rem; padding:0 50px; }
+.RotationTitle p{width:50%; height: auto;  margin-top:50px;}
+.staticBox{width:200px; height: 200px; margin: 100px 0; position: relative; display: flex;justify-content: center; align-items: center; background: url('../src/Images/centarOrbit.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;}
+.boxClass{width:200px; position: relative; min-height: 200px; animation: rotateAroundZ 6s linear infinite; margin: 200px;  display: flex;justify-content: center; align-items: center; }
+ .smallCenter{width:200px; height: 200px; position: absolute; display: flex;justify-content: center; align-items: center; background-position: center;background-repeat: no-repeat;background-size: cover;}
+.smallBoxesTopLeft{ animation:rotateAroundZIcon 6s linear infinite; width:40px; height: 40px; position:absolute;left:30px; top:0; background: url('../src/Images/wordIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+.smallBoxesTopRight{animation:rotateAroundZIcon 6s linear infinite;width:40px; height: 40px; position:absolute;right:30px; top:0; background: url('../src/Images/powerIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+.smallBoxesBottomLeft{animation:rotateAroundZIcon 6s linear infinite;width:40px; height: 40px; position:absolute;left:30px; bottom:0; background: url('../src/Images/cloudIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+.smallBoxesBottomRight{animation:rotateAroundZIcon 6s linear infinite;width:40px; height: 40px; position:absolute;right:30px; bottom:0; background: url('../src/Images/onenoteIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+.smallBoxesLeftMidd{animation:rotateAroundZIcon 6s linear infinite;width:40px; height: 40px; position:absolute;left:60px ;  background: url('../src/Images/skypeIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+.smallBoxesRightMidd{animation:rotateAroundZIcon 6s linear infinite;width:40px; height: 40px; position:absolute;right:60px;  background: url('../src/Images/excelIcon.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;}
+
+.ComponentBottomB{position: relative; width:100%; min-height: 100vh; }
+.ComponentBottomImage{position: absolute;width:100%; min-height: 100vh; background: url('../src/Images/mother-and-child-reunion.jpg');background-position: center;background-repeat: no-repeat;background-size: cover; z-index: 2; display: flex;justify-content: stretch;}
+.displayLeftBottom{position: absolute;left:0;bottom:0;height:100px; width:30%;z-index:2;background-color: #FFFFFF;display: flex;justify-content: center; padding: 0 50px; align-items: center; }
+.TitlePositionBt{position: absolute;left:30px;bottom:200px;height:100px; font-size:4.2rem; width:50%;color:#fff; z-index:2;display: flex;justify-content: center; padding: 0 50px; align-items: center;}
+.GoLeft{width:100%; min-height:100vh; display: flex; align-items: center; justify-content: flex-start;}
+
+.elementHalf{width:50%; min-height: 70vh; display: flex;align-items: center;justify-content: center; padding:0 50px;}
+.elementHalf h1{font-size:4rem; color:#0078D4;}
+.elementOrderFirst{order:1;}
+.elementOrderSecond{order:2;}
+.phoneImageContainer{width:100%; height: 500px; position: relative; overflow: hidden; display: flex; justify-content: center; align-content: center;} 
+.phoneUrlOne{ z-index:1; animation: goFirst 2s linear forwards; position:absolute; background:url('../src/Images/mobile-scenario-triptych-android-01.png');}
+.phoneUrlTwo{z-index:2;  position:absolute; background:url('../src/Images/mobile-scenario-triptych-android-02.png');}
+.phoneUrlThree{z-index:3; animation:goSecond 2s linear forwards; position:absolute; background:url('../src/Images/mobile-scenario-triptych-android-03.png');}
+.phone{position: relative; width:100%; height: 500px; display: flex; justify-content: center; background-repeat: no-repeat; background-position: center; background-size: contain;}
+
+.AdverImage{position: absolute;  width:100%; height: 500px;background:url('../src/Images/adver.jpg'); justify-content: center; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.Footer{position: relative; width:100%; min-height: 100px; display: flex; align-items: center; justify-content: center;background-color: #0f0f0f; color:#fff;}
+@media screen and (max-width:1300px){
+  .title-content h1{
+    font-size: 3.7rem;
+  }
+  .elementHalf h1{font-size:2rem; }
+  .fullT h1{font-size:2.9rem;}
+  .afterMidFullCont{width:calc(80% - 40px);}
+  .afterMidFullTitle{width:calc(70% - 40px);}
+  .afterMidFullTitle h1{ font-size: 1.6rem;}
+  .midrightCont{  width:70%;}
+  .productBtn{margin: 0 10px;}
+  
+}
+@media screen and (max-width:1280px){
+  
+  .title-content h1{
+    font-size: 3.3rem;
+    
+  }
+  .productBtn{margin: 0 5px;}
+  .textShow h1 {font-size: 3rem; }
+  .Nav-Content{width:90%; }
+  .ImgFull{width:70%;  margin: 0 10% 0 20%; overflow: hidden;}
+}
+@media screen and (max-width:768px){
+  .title-content h1{
+    font-size: 2.8rem;
+    width:90%;
+    
+  }
+  .productBtn{margin: 0 2px; padding:22px;}
+  .ImgFull{width:80%;  margin: 0 0 0 20%; overflow: hidden;}
+  .textShow { width:90%; margin: 0 auto;}
+   .textShow h1{font-size: 3rem;}
+  .title-content{width:90%;}  
+  .Sub-Title{width: 90%;}
+  .Nav-Content{width:90%; }
+  .BottomCreatAccount{width:100%; }
+  .showAll{flex-direction: column;background-color: rgba(0, 0, 0, 0);}
+  .thirdSpace{display: none;} .firstSpace{display: none;}
+  .secondSpace section{ width:100%; flex-direction: column;color:white;} .secondSpace section div{animation:fadeInUp 0.7s ease-in }  .secondSpace p{display: none;}
+  .secondSpace section button{width:80%; margin:0 auto;}
+  
+}
